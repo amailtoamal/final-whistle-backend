@@ -9,7 +9,7 @@ application.config["MONGO_URI"] = "mongodb://amal:amal1234@ds131743.mlab.com:317
 mongo = PyMongo(application)
 
 
-@application.route('/login', methods=['POST,GET'])
+@application.route('/login', methods=['POST','GET'])
 def login():
       x = mongo.db.users.find()
       return dumps(x)
